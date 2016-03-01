@@ -3,5 +3,7 @@
 <% @posts.each do |post| %>
 <h2><%= post.todo %></h2>
 <p><%= post.comment %></p>
-<%= link_to "Show List", post_path(post) %>
+<%= link_to 'Show List', post_path(post) %>
+<%= link_to 'Edit Post', edit_post_path(post) %>
+<%= link_to 'Destroy Post', post, method: :delete %>
 <% end %>
